@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pierre MAGIEU">
+    <meta name="Description" content="Projet SAE WEB de L2 groupe TDA de Pierre MAGIEU ">
+    <title>Calculatrice SAE WEB</title>
+    <link rel="stylesheet" href="./SAE.css">
+    <script defer src="./SAE.js"></script>
+</head>
+<body>
+    <section class="titres">
+        <h1>SAE Programmation Web 1 :</h1>
+        <h2>Calculatrice Graphique</h2>
+    </section>
+
+    <div class="btnPowerContainer">
+        <div class="btnPower">OFF</div>
+    </div>
+    
+    <section class="calculatrice">
+        <div class="onoffBox">
+            <div class="onoff"></div>
+        </div>
+        <div class="moi">Pierre MAGIEU</div>
+        <canvas class="historiqueSecDisplay affichage" id="canva">
+        </canvas>
+        <section class="boutons">
+
+            <div class = "bouton">C</div>
+            <div class="bouton">ZOOM +</div>
+            <div class="bouton">ZOOM -</div>
+            <div class="bouton">.</div>
+            <div class="bouton">DEL</div>
+            <div class = "bouton">x</div>
+            <div class="bouton">√x</div>
+            <div class="bouton">cos(x)</div>
+            <div class="bouton">sin(x)</div>
+            <div class="bouton">tan(x)</div>
+            <div class="bouton">MODE</div>
+            <div class="bouton">xⁿ</div>
+            <div class="bouton">%</div>
+            <div class="bouton">(</div>
+            <div class="bouton">)</div>
+            <div class="bouton">8</div>
+            <div class="bouton">7</div>
+            <div class="bouton">9</div>
+            <div class="bouton">/</div>
+            <div class="bouton">*</div>
+            <div class="bouton">4</div>
+            <div class="bouton">5</div>
+            <div class="bouton">6</div>
+            <div class="bouton">-</div>
+            <div class="bouton">+</div>
+            <div class="bouton">1</div>
+            <div class="bouton">2</div>
+            <div class="bouton">3</div>
+            <div class="bouton">0</div>
+            <div class="bouton">EXE</div>
+        </section>
+    </section>
+    <form id="graphForm" class="hide formulaire">
+        <label for="formule">Entrez une formule</label>
+        <br>
+        <input type="text" id="formule">
+        <input type="submit" id="formuleSubmit" value="Tracer">
+        <p class="important">Ne pas oubier le "*" pour les multiplications</p>
+    </form>
+    
+    <div class="afficheTitre">
+        H1
+    </div>
+    <div class="darkMode">
+        <img src="./img/moonV2.png" alt="Icone Lune">
+    </div>
+</body>
+</html>
