@@ -1,0 +1,1251 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Page Connexion Inscription */
+
+.connexion,
+.inscription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #101010;
+    overflow: hidden;
+}
+
+
+
+.connexion form,
+.inscription form {
+    margin-top: 60px;
+    width: 350px;
+    height: auto;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+.connexion form h1,
+.inscription form h1 {
+    padding-top: 25px;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: "Anton", sans-serif;
+    letter-spacing: 12px;
+    text-align: center;
+}
+
+.connexion .blackBox,
+.inscription .blackBox {
+    height: 4px;
+    width: 192px;
+    background-color: black;
+    border-radius: 100px;
+    margin: 10px auto -10px auto;
+}
+
+.connexion form .input-box,
+.inscription form .input-box {
+    width: 90%;
+    position: relative;
+    margin: 30px 0;
+    text-align: right;
+    font-family: "Anton", sans-serif;
+    font-size: 15px;
+    letter-spacing: 2px;
+    z-index: 999999;
+}
+
+
+.connexion form .input-box input,
+.inscription form .input-box input {
+    width: 75%;
+    height: 35px;
+    margin-left: 20px;
+    border: solid #101010 3px;
+    border-radius: 7px;
+    padding: 0 45px 0 20px;
+    transition: 1s;
+    z-index: 999999;
+}
+
+.connexion form .input-box input:focus,
+.inscription form .input-box input:focus {
+    outline: none;
+}
+
+
+
+.connexion form .input-box img,
+.inscription form .input-box img {
+    position: absolute;
+    right: 3px;
+    top: 30px;
+    height: 25px;
+    width: 25px;
+}
+
+.connexion form .input-box label,
+.inscription form .input-box label {
+    font-size: 13px;
+}
+
+
+.connexion form button,
+.inscription form button {
+    width: 75%;
+    font-family: "Anton", sans-serif;
+    letter-spacing: 4px;
+    font-size: 16px;
+    background-color: #101010;
+    color: white;
+    border-radius: 7px;
+    padding: 10px 0;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 1s;
+    position: relative;
+    z-index: 100;
+}
+
+.connexion form button::before,
+.inscription form button::before {
+    content: "";
+    background-color: #ffffff;
+    border-radius: 100px;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 30px;
+    left: -10px;
+    transition: 1s;
+    box-shadow: #ffffff 0px 0px 10px;
+}
+
+.connexion form button:hover::before,
+.inscription form button:hover::before {
+    content: "";
+    background-color: #101010;
+    border-radius: 100px;
+    position: absolute;
+    top: -5px;
+    left: 250px;
+    box-shadow: #101010 0px 0px 10px;
+}
+
+.connexion form button:hover,
+.inscription form button:hover {
+    color: #101010;
+    background-color: white;
+    box-shadow: #101010 0px 0px 10px;
+}
+
+form .connInsc {
+    font-family: "Roboto", sans-serif;
+    font-size: 10px;
+    margin-bottom: 15px;
+}
+
+form .connInsc a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #101010;
+    transition: 1s;
+}
+
+form .connInsc a:hover {
+    text-decoration: underline;
+    color: rgb(86, 85, 85);
+    transition: 5ms;
+}
+
+.connexion .erreur,
+.inscription .erreur {
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+
+.connexion .logo,
+.inscription .logo {
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    top: 30px;
+    z-index: -2;
+}
+
+.connexion .bg,
+.inscription .bg {
+    position: fixed;
+    width: 1400px;
+    bottom: 0px;
+    right: 0;
+    z-index: -3;
+}
+
+.fg {
+    position: fixed;
+    bottom: 0;
+    left: -40px;
+}
+
+#particles-js {
+    height: 100%;
+    position: absolute;
+    z-index: -3;
+}
+
+.info {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.info:hover {
+    box-shadow: #ffffff 0 0 20px;
+}
+
+.infoActif {
+    box-shadow: #ffffff 0 0 20px;
+}
+
+
+.infoTexte {
+    color: white;
+    z-index: 3;
+    height: auto;
+    width: 400px;
+    text-align: center;
+    position: absolute;
+    bottom: 50px;
+    left: 70px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    opacity: 0;
+    transition: 0.5s;
+    cursor: default;
+}
+
+
+.infoTexteActif {
+    opacity: 1;
+}
+
+
+/* Page Principale */
+
+.index .corps .bgPlanete {
+    position: absolute;
+    top: 10vh;
+    left: 50vw;
+    transform: translateX(-50%);
+    z-index: -345;
+
+}
+
+
+.index {
+    background-color: #101010;
+    color: white;
+}
+
+.index .logo {
+    width: 125px;
+    cursor: pointer;
+}
+
+.index .deco {
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.index header {
+    display: flex;
+    flex-direction: row;
+    margin: 25px 25px;
+}
+
+.index header h1 {
+    font-family: "anton", sans-serif;
+    font-size: 100px;
+    font-weight: 400;
+    margin-top: -20px;
+}
+
+.index header .TitreSousTitre .sousTitre .ligne {
+    width: 510px;
+    height: 10px;
+    background-color: #ffffff;
+    border-radius: 7px;
+    margin-left: -20px;
+}
+
+.index header .TitreSousTitre .sousTitre {
+    display: flex;
+    margin-top: -20px;
+}
+
+.index header .TitreSousTitre .sousTitre .nom {
+    margin-top: -15px;
+    margin-left: 10px;
+    font-family: "anton", sans-serif;
+    font-size: 25px;
+}
+
+.index header .total {
+    position: absolute;
+    background-color: #ffffff;
+    color: #101010;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 100px;
+    border-radius: 100px;
+    right: 25px;
+    top: 25px;
+    margin-top: 10px;
+    padding: 0 10px;
+}
+
+.index header .total .nbre {
+    font-weight: bold;
+}
+
+.index .corps {
+    background-color: #ffffff2d;
+    border-radius: 50px;
+    width: 75%;
+    height: 62vh;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 0 30px;
+}
+
+.index .corps ul {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    overflow: scroll;
+    overflow-x: hidden;
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+
+}
+
+.index .corps ul::-webkit-scrollbar {
+    width: 15px;
+}
+
+.index .corps ul::-webkit-scrollbar-track {
+    background: #ffffff;
+    border-radius: 100px;
+    margin-block: 20px;
+}
+
+.index .corps ul::-webkit-scrollbar-thumb {
+    background: #101010;
+    border-radius: 100px;
+    border: 3px solid #ffffff;
+}
+
+.index .corps ul::-webkit-scrollbar-thumb:hover {
+    background: #525252;
+    cursor: pointer;
+}
+
+
+.index .corps ul li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 30px auto;
+    width: 90%;
+
+}
+
+.index .corps ul li .btnModifier {
+    text-align: center;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+
+.index .corps ul li .matos {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.index .corps ul li .matos div {
+    margin: 0 10px;
+}
+
+.btnAjouter,
+.btnRetirer,
+.btnModifierKilo {
+    font-weight: 400;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #101010;
+    width: 100px;
+    height: 30px;
+    border-radius: 7px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.espace {
+    width: 100px;
+    height: 30px;
+}
+
+.index .corps ul li .matos .premier {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.index .corps ul li .matos .deux {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.index .corps ul li .matos .trois {
+    margin: 10px;
+}
+
+.index .corps ul li .espace {
+    width: 10%;
+}
+
+.index .corps ul li .matos h2 {
+    font-family: "anton", sans-serif;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.index .corps ul li .ligneMatos {
+    height: 3px;
+    width: 100%;
+    border-radius: 7px;
+    background-color: #ffffff;
+    margin: 20px 0;
+}
+
+.index .corps ul li .warning {
+    text-align: center;
+    width: auto;
+    margin: auto -20px auto 0px;
+    opacity: 0;
+}
+
+.index .corps ul li .warningText {
+    font-size: 13px;
+}
+
+
+.index .boutons {
+    display: flex;
+    flex-direction: row;
+    bottom: 20px;
+    width: 100%;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.index .boutons div {
+    font-size: 20px;
+    font-family: "anton", sans-serif;
+    margin: 0 60px;
+    background-color: #ffffff;
+    padding: 20px;
+    color: #101010;
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+.blur {
+    filter: blur(5px);
+}
+
+
+.conteneurImg {
+    height: 100px;
+    width: 100px;
+    border-radius: 50% 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+}
+
+/* Ajouter Kilomètres */
+.index .ajouterKilo {
+    width: 80%;
+    position: absolute;
+    top: 20vh;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #101010;
+    display: none;
+
+}
+
+.index .ajouterKilo h2 {
+    background-color: #53744A;
+    color: #ffffff;
+    font-family: "anton", sans-serif;
+    font-size: 40px;
+    padding: 10px 0px;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 600;
+    border-radius: 100px;
+}
+
+.index .ajouterKilo .nom {
+    color: #101010;
+    text-transform: uppercase;
+}
+
+
+.index .ajouterKilo .formAdd {
+    background-color: #ffffff;
+    margin: 40px auto;
+    width: 40%;
+    height: 250px;
+    font-family: "Roboto", sans-serif;
+    position: relative;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.index .ajouterKilo .formAdd input {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    border: #101010 solid 2px;
+    border-radius: 7px;
+    height: 30px;
+}
+
+.index .ajouterKilo .formAdd input:focus {
+    outline: none;
+}
+
+
+.index .ajouterKilo .formAdd .btnAdd {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    font-size: 10px;
+}
+
+.index .ajouterKilo .formAdd .btnAdd button {
+    margin: 0 20px;
+    background-color: #D9D9D9;
+    height: 30px;
+    width: 200px;
+    color: #101010;
+    cursor: pointer;
+    border-radius: 7px;
+    border: none;
+    transition: 0.5s;
+}
+
+.index .ajouterKilo .formAdd .btnAdd button:hover {
+    background-color: #909090;
+    box-shadow: #525252 0 0 10px;
+}
+
+/* Supprimer Kilomètres */
+.index .suppKilo {
+    width: 80%;
+    position: absolute;
+    top: 20vh;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #101010;
+    display: none;
+
+}
+
+.index .suppKilo h2 {
+    background-color: #744A4A;
+    color: #ffffff;
+    font-family: "anton", sans-serif;
+    font-size: 40px;
+    padding: 10px 0px;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 600;
+    border-radius: 100px;
+
+}
+
+.index .suppKilo .nom {
+    color: #101010;
+    text-transform: uppercase;
+}
+
+
+.index .suppKilo .formRemove {
+    background-color: #ffffff;
+    margin: 40px auto;
+    width: 40%;
+    height: 250px;
+    font-family: "Roboto", sans-serif;
+    position: relative;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.index .suppKilo .formRemove input {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    border: #101010 solid 2px;
+    border-radius: 7px;
+    height: 30px;
+}
+
+.index .suppKilo .formRemove input:focus {
+    outline: none;
+}
+
+.index .suppKilo .formRemove .btnRemove {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    font-size: 10px;
+}
+
+.index .suppKilo .formRemove .btnRemove button {
+    margin: 0 20px;
+    background-color: #D9D9D9;
+    height: 30px;
+    width: 200px;
+    color: #101010;
+    cursor: pointer;
+    border-radius: 7px;
+    border: none;
+    transition: 0.5s;
+}
+
+.index .suppKilo .formRemove .btnRemove button:hover {
+    background-color: #909090;
+    box-shadow: #525252 0 0 10px;
+}
+
+/* Ajouter Equipement */
+
+.index .addEquip {
+    width: 80%;
+    position: absolute;
+    top: 20vh;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #101010;
+    display: none;
+
+}
+
+.index .addEquip h2 {
+    background-color: #3B5098;
+    color: #ffffff;
+    font-family: "anton", sans-serif;
+    font-size: 40px;
+    padding: 10px 0px;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 600;
+    border-radius: 100px;
+}
+
+.index .addEquip .sousTitre {
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.index .addEquip .nom {
+    color: #101010;
+}
+
+
+.index .addEquip .formAddEquip {
+    background-color: #ffffff;
+    margin: 40px auto;
+    width: 40%;
+    height: 370px;
+    font-family: "Roboto", sans-serif;
+    position: relative;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.index .addEquip .formAddEquip input {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    height: 30px;
+    border: #101010 solid 2px;
+    border-radius: 7px;
+}
+
+.index .addEquip .formAddEquip input:focus {
+    outline: none;
+}
+
+.index .addEquip .formAddEquip .photo {
+    border: none;
+    width: 55%;
+    cursor: pointer;
+    border-radius: 0;
+}
+
+.index .addEquip .formAddEquip .photo::file-selector-button {
+    cursor: pointer;
+    background-color: #3B5098;
+    border: none;
+    border-radius: 7px;
+    padding: 4px;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.index .addEquip .formAddEquip .photo::file-selector-button:hover {
+    background-color: #243469;
+}
+
+.index .addEquip .formAddEquip .btnAddEquip {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    font-size: 10px;
+    margin-bottom: 20px;
+}
+
+.index .addEquip .formAddEquip .btnAddEquip button {
+    margin: 0 20px;
+    background-color: #D9D9D9;
+    height: 30px;
+    width: 200px;
+    color: #101010;
+    cursor: pointer;
+    border-radius: 7px;
+    border: none;
+    transition: 0.5s;
+}
+
+.index .addEquip .btnAddEquip button:hover {
+    background-color: #909090;
+    box-shadow: #525252 0 0 10px;
+}
+
+.protec {
+    background-color: #101010b4;
+    position: absolute;
+    height: 95vh;
+    width: 100%;
+    top: 0;
+    display: none;
+}
+
+
+/* Supprimer un élément */
+.removeEquip {
+    position: absolute;
+    width: 80%;
+    top: 20vh;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #101010;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    display: none;
+}
+
+
+.removeEquip .sousTitre {
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+    position: sticky;
+    top: 0px;
+    background-color: #fff;
+}
+
+.index .removeEquip h2 {
+    background-color: #6A3B98;
+    color: #ffffff;
+    font-family: "anton", sans-serif;
+    font-size: 40px;
+    padding: 10px 0px;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 600;
+    border-radius: 100px;
+
+}
+
+.removeEquip .listRemoveEquip {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    overflow: scroll;
+    overflow-x: hidden;
+    margin-top: 20px;
+
+}
+
+.removeEquip .listRemoveEquip li {
+    background-color: #D9D9D9;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 60%;
+    padding: 20px;
+    margin: 15px auto;
+    border-radius: 20px;
+    height: 40px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.removeEquip .listRemoveEquip li:hover {
+    background-color: #999999;
+    box-shadow: #999999 0 0 10px;
+}
+
+.removeEquip .listRemoveEquip div {
+    margin: auto 0;
+}
+
+.removeEquip .bg {
+    background-color: #fff;
+    width: 50%;
+    margin: 20px auto;
+    padding: 0 20px;
+    border-radius: 20px;
+}
+
+
+
+.removeEquip .listRemoveEquip .nomEquipPhoto {
+    width: 70px;
+    height: 70px;
+    margin: -15px 20px 0 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: 3px 2px 2px #000;
+}
+
+.removeEquip .listRemoveEquip .nomEquipPhoto img {
+    width: 100%;
+}
+
+.removeEquip .listRemoveEquip .nomEquip {
+    display: flex;
+    flex-direction: column;
+    text-shadow: 1px 1px 2px #7b7b7b;
+    text-transform: uppercase;
+}
+
+.removeEquip .listRemoveEquip .nomEquip div:first-of-type {
+    color: #6A3B98;
+}
+
+.ekip {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+}
+
+
+.removeEquip .btnAnnulRemoveEquip {
+    background-color: #A82B2B;
+    color: #fff;
+    border-radius: 7px;
+    margin: 0 auto;
+    font-size: 15px;
+    width: 10%;
+    padding: 7px 65px;
+    text-align: center;
+    font-weight: 400;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.removeEquip .btnAnnulRemoveEquip:hover {
+    box-shadow: #741d1d 0 0 10px;
+    background-color: #741d1d;
+}
+
+.index .removeEquip ul::-webkit-scrollbar {
+    width: 15px;
+}
+
+.index .removeEquip ul::-webkit-scrollbar-track {
+    background: #D9D9D9;
+    border-radius: 100px;
+    margin-block: 20px;
+}
+
+.index .removeEquip ul::-webkit-scrollbar-thumb {
+    background: #101010;
+    border-radius: 100px;
+    border: 3px solid #D9D9D9;
+}
+
+.index .removeEquip ul::-webkit-scrollbar-thumb:hover {
+    background: #525252;
+    cursor: pointer;
+}
+
+/* Supprimer équipement vérification */
+.removeEquipVerif {
+    position: absolute;
+    width: 80%;
+    top: 20vh;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #101010;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    display: none;
+}
+
+.index .removeEquipVerif h2 {
+    background-color: #6A3B98;
+    color: #ffffff;
+    font-family: "anton", sans-serif;
+    font-size: 40px;
+    padding: 10px 0px;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 600;
+    border-radius: 100px;
+}
+
+.index .removeEquipVerif .verifCorps {
+    background-color: #fff;
+    margin: 40px auto;
+    width: 40%;
+    height: 250px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.index .removeEquipVerif .verifCorps .btnRemoveEquipVerif {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.index .removeEquipVerif .verifCorps .btnRemoveEquipVerif button {
+    margin: 0 20px;
+    background-color: #D9D9D9;
+    height: 30px;
+    width: 200px;
+    color: #101010;
+    cursor: pointer;
+    border-radius: 7px;
+    border: none;
+    transition: 0.5s;
+}
+
+
+.index .removeEquipVerif .verifCorps .btnRemoveEquipVerif .sur {
+    background-color: #A82B2B;
+    color: #fff;
+}
+
+.index .removeEquipVerif .verifCorps .btnRemoveEquipVerif .sur:hover {
+    box-shadow: #741d1d 0 0 10px;
+    background-color: #741d1d;
+}
+
+.index .removeEquipVerif .verifCorps .photo {
+    margin-bottom: 25px;
+}
+
+.index .removeEquipVerif .verifCorps .nomEquipSupp {
+    color: #A82B2B;
+}
+
+.index .removeEquipVerif .verifCorps .btnRemoveEquipVerif button:hover {
+    background-color: #909090;
+    box-shadow: #525252 0 0 10px;
+}
+
+
+/* Modifier équipement */
+.index .modifEquip {
+    width: 80%;
+    position: absolute;
+    top: 20vh;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #101010;
+    display: none;
+}
+
+.index .modifEquip h2 {
+    color: #ffffff;
+    font-family: "anton", sans-serif;
+    font-size: 40px;
+    padding: 10px 0px;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 600;
+    border-radius: 100px;
+    display: block;
+    background-color: #3B8D98;
+}
+
+.index .modifEquip .equip {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 10px auto -20px auto;
+    justify-content: space-around;
+}
+
+
+.index .modifEquip .equip .nomEquip {
+    margin-top: 7%;
+    padding-left: 30px;
+    font-size: 1em;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.index .modifEquip .equip img {
+    height: 75%;
+}
+
+.index .modifEquip .sousTitre {
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.index .modifEquip .formModifEquip {
+    background-color: #ffffff;
+    margin: 40px auto;
+    width: 40%;
+    height: 370px;
+    font-family: "Roboto", sans-serif;
+    position: relative;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.index .modifEquip .formModifEquip input {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    height: 30px;
+    border: #101010 solid 2px;
+    border-radius: 7px;
+}
+
+.index .modifEquip .formModifEquip input:focus {
+    outline: none;
+}
+
+.index .modifEquip .formModifEquip .photo {
+    border: none;
+    width: 55%;
+    cursor: pointer;
+    border-radius: 0;
+}
+
+.index .modifEquip .formModifEquip .photo::file-selector-button {
+    cursor: pointer;
+    background-color: #3B5098;
+    border: none;
+    border-radius: 7px;
+    padding: 4px;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.index .modifEquip .formModifEquip .photo::file-selector-button:hover {
+    background-color: #243469;
+}
+
+.index .modifEquip .formModifEquip .btnModifEquip {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    font-size: 10px;
+    margin-bottom: 20px;
+}
+
+.index .modifEquip .formModifEquip .btnModifEquip button {
+    margin: 0 20px;
+    background-color: #D9D9D9;
+    height: 30px;
+    width: 200px;
+    color: #101010;
+    cursor: pointer;
+    border-radius: 7px;
+    border: none;
+    transition: 0.5s;
+}
+
+.index .modifEquip .btnModifEquip button:hover {
+    background-color: #909090;
+    box-shadow: #525252 0 0 10px;
+}
+
+/* Modifier kilomètres prévention*/
+.index .modifPrev {
+    width: 80%;
+    position: absolute;
+    top: 20vh;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #101010;
+    display: none;
+}
+
+.index .modifPrev .question {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+.index .modifPrev h2 {
+    background-color: #3B8D98;
+    color: #ffffff;
+    font-family: "anton", sans-serif;
+    font-size: 40px;
+    padding: 10px 0px;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 600;
+    border-radius: 100px;
+}
+
+.index .modifPrev .nom {
+    color: #101010;
+    text-transform: uppercase;
+}
+
+
+.index .modifPrev .formModifPrev {
+    background-color: #ffffff;
+    margin: 40px auto;
+    width: 40%;
+    height: 250px;
+    font-family: "Roboto", sans-serif;
+    position: relative;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.index .modifPrev .formModifPrev input {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    border: #101010 solid 2px;
+    border-radius: 7px;
+    height: 30px;
+}
+
+.index .modifPrev .formModifPrev input:focus {
+    outline: none;
+}
+
+
+.index .modifPrev .formModifPrev .btnModifPrev {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    font-size: 10px;
+}
+
+.index .modifPrev .formModifPrev .btnModifPrev button {
+    margin: 0 20px;
+    background-color: #D9D9D9;
+    height: 30px;
+    width: 200px;
+    color: #101010;
+    cursor: pointer;
+    border-radius: 7px;
+    border: none;
+    transition: 0.5s;
+}
+
+.index .modifPrev .formModifPrev .btnModifPrev button:hover {
+    background-color: #909090;
+    box-shadow: #525252 0 0 10px;
+}
