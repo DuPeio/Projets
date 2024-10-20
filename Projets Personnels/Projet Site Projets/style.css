@@ -3,8 +3,32 @@ body{
     background-color: black;
 }
 
+.rond1{
+    background-color: #E4A800 ;
+    width: 40vw;
+    height: 40vw;
+    border-radius: 50%;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.rond2{
+    background-color:#552800 ;
+    width: 34vw;
+    height: 34vw;
+    border-radius: 50%;
+    justify-content: center;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
 h1{
     text-align: center;
+    color: #FF0066;
+    font-size: 5vw;
+    white-space: nowrap;
 }
 
 ul{
@@ -37,4 +61,9 @@ li:hover{
 
 .uni{
     background-color: rgb(204, 184, 2);
+}
+
+.typesProjets, .projets {
+    margin-top: 100vh; /* Crée un espace en dessous du titre */
+    padding: 20px;
 }
