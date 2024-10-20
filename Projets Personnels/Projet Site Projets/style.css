@@ -1,34 +1,53 @@
+@font-face {
+    font-family: 'CreamBeige';
+    src: url('./fonts/Cream\ Beige.ttf') format('truetype');
+}
+
 body{
     color: white;
     background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
-.rond1{
-    background-color: #E4A800 ;
+
+
+.rond1 {
+    position: sticky; 
+    top: -28vw; 
+    background-color: #E4A800;
     width: 40vw;
     height: 40vw;
     border-radius: 50%;
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7vw; 
+    overflow: hidden;
 }
 
-.rond2{
-    background-color:#552800 ;
+.rond2 {
+    position: absolute; 
+    background-color: #552800;
     width: 34vw;
     height: 34vw;
     border-radius: 50%;
-    justify-content: center;
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
 }
 
-h1{
+h1 {
+    position: sticky; 
+    top: 10px; 
     text-align: center;
     color: #FF0066;
-    font-size: 5vw;
+    font-size: 8vw;
+    font-family: 'CreamBeige', sans-serif;
     white-space: nowrap;
+    margin-top: -25vw; 
+    text-shadow: #000 10px 10px 0;
 }
 
 ul{
