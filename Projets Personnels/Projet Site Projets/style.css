@@ -137,6 +137,8 @@ ul li{
     padding: 5vh 0;
     width: 100%;
     justify-content: center;
+    position: sticky;
+    top: 0;
 } 
 
 .typesProjets li{
@@ -149,7 +151,7 @@ ul li{
 }
 
 .projetBG{
-    margin-top: 50px;
+    /* margin-top: 50px; */
     border-radius: 80% 80% 0 0;
     overflow: visible;
     width: 100%;

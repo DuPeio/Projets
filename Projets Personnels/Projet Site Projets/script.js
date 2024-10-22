@@ -22,7 +22,7 @@ const title = document.querySelector('H1');
 
 document.addEventListener('scroll', () => {
     const scrollPosition = window.scrollY; 
-    const tailleFont = Math.max(8 - scrollPosition / 150, 5); 
+    const tailleFont = Math.max(8 - scrollPosition / 150, 2); 
 
     title.style.fontSize = `${tailleFont}vw`; 
 });
