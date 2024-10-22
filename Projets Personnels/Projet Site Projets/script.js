@@ -40,3 +40,31 @@ document.addEventListener('mousemove', (e) => {
     rond2.style.top = y; 
     rond2.style.transform = "translate(-"+x+",-"+y+")";
 });
+
+
+
+// Gerer les cartes 
+let cartes = document.querySelectorAll(".carte");
+
+cartes.forEach(elmt => {
+    elmt.addEventListener("mousemove", (e)=>{
+        let elmRect = elmt.getBoundingClientRect();
+        let x = e.clientX - elmRect.x;
+        let y = e.clientY - elmRect.y;
+
+        let milieuCarteW = elmRect.width/2;
+        let milieuCarteH = elmRect.height/2;
+
+        let angleY = (x - milieuCarteW)/20;
+        let angleX = -(y-milieuCarteH) /20;
+
+        elmt.style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg) scale(1.05)`
+        elmt.style.boxShadow="#000 20px 20px 0"
+
+    });
+
+    elmt.addEventListener("mouseleave", (e)=>{
+        elmt.style.transform = `rotateX(0deg) rotateY(0deg) scale(1)`
+        elmt.style.boxShadow="#000 15px 15px 0"
+    })
+});
