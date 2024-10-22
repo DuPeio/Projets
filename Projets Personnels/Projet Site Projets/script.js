@@ -22,7 +22,7 @@ const title = document.querySelector('H1');
 
 document.addEventListener('scroll', () => {
     const scrollPosition = window.scrollY; 
-    const tailleFont = Math.max(8 - scrollPosition / 250, 5); 
+    const tailleFont = Math.max(8 - scrollPosition / 150, 5); 
 
     title.style.fontSize = `${tailleFont}vw`; 
 });
@@ -39,5 +39,4 @@ document.addEventListener('mousemove', (e) => {
     rond2.style.left = x;
     rond2.style.top = y; 
     rond2.style.transform = "translate(-"+x+",-"+y+")";
-    
 });

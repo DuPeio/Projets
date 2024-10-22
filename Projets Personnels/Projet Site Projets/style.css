@@ -2,6 +2,7 @@
     font-family: 'CreamBeige';
     src: url('./fonts/Cream\ Beige.ttf') format('truetype');
 }
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 body{
     color: white;
@@ -15,10 +16,27 @@ body{
 }
 
 
+/* h1 {
+    animation-duration: 3s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  } */
 
+  /* Page d'accueil */
 .rond1 {
     position: sticky; 
-    top: -28vw; 
+    top: -31vw; 
     background-color: #E4A800;
     width: 40vw;
     height: 40vw;
@@ -26,7 +44,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 7vw; 
+    margin-top: 5vh; 
     overflow: hidden;
 }
 
@@ -50,25 +68,101 @@ h1 {
     text-shadow: #000 10px 10px 0;
 }
 
+.scrollBas{
+    position: absolute;
+    top: 85vh;
+    transition: 1.5ms;
+    width: 100%;
+}
+
+.scrollBasGauche{
+    left: 30px;
+    position: absolute;
+}
+
+.scrollBasDroite{
+    right: 30px;
+    position: absolute;
+}
+
+.scrollBas img{
+    animation: 1.5s infinite alternate move;
+}
+
+@keyframes move{
+    from{
+        top: 0;
+    }
+    to{
+        top:5vh;
+    }
+}
+
+.scrollBasTexte{
+    text-align: center;
+    top: 10vh;
+    left: 45vw;
+    position: absolute;
+    z-index: -1;
+    font-family: Roboto, sans serif;
+
+}
+
+
+
+/* Corps de la page */
+
 ul{
     list-style: none;
     display: flex;
     flex-direction: row;
-    width: 95%;
-    height: 50vh;
 }
-
 
 ul li{
     text-decoration: none;
     background-color: rgb(46, 46, 46);
-    width: 100%;
-    margin: 1%;
+    margin: 4%;
     text-align: center;
     border-radius: 20px;
     transition: 0.5s;
 }
 
+
+.typesProjets{
+    margin-top: 60vh;
+    background-color: #E4A800;
+    padding: 10vh 0;
+    width: 100%;
+    justify-content: center;
+} 
+
+.typesProjets li{
+    width: 35vw;
+    height: 5vw;
+    margin: 0 7vw;
+    font-size: 1.3vw;
+    font-family: 'CreamBeige', sans-serif;
+    text-shadow: #000 6px 6px 0;
+
+}
+
+
+.projets {
+    background-color: #FF0066;
+    padding: 0;
+    width: 100%;
+    overflow-x: scroll; 
+    height: 50vw;
+    display: flex;
+}
+
+.projets li {
+    flex: 0 0 25vw; 
+    margin: 2vw; 
+}
+
+
+/*
 li:hover{
     background-color: rgb(71, 71, 71);
     cursor: pointer;
@@ -80,9 +174,5 @@ li:hover{
 
 .uni{
     background-color: rgb(204, 184, 2);
-}
+} */
 
-.typesProjets, .projets {
-    margin-top: 100vh; /* Crée un espace en dessous du titre */
-    padding: 20px;
-}
