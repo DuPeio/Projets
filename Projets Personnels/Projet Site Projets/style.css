@@ -133,13 +133,18 @@ ul li{
 
 .typesProjets{
     margin-top: 60vh;
-    background-color: #E4A800;
+    background-color: #E4A800;   
     padding: 5vh 0;
     width: 100%;
     justify-content: center;
     position: sticky;
     top: 0;
 } 
+
+.typesProjets li:hover{
+    cursor: pointer;
+    background-color: rgb(61, 61, 61);
+}
 
 .typesProjets li{
     width: 35vw;
@@ -150,8 +155,10 @@ ul li{
     text-shadow: #000 6px 6px 0;
 }
 
+
+
 .projetBG{
-    /* margin-top: 50px; */
+    margin-top: 50px;
     border-radius: 80% 80% 0 0;
     overflow: visible;
     width: 100%;
