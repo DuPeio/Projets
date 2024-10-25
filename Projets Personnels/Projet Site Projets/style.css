@@ -2,9 +2,10 @@
     font-family: 'CreamBeige';
     src: url('./fonts/Cream\ Beige.ttf') format('truetype');
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-body{
+body {
     color: white;
     background-color: black;
     display: flex;
@@ -13,6 +14,7 @@ body{
     align-items: center;
     margin: 0;
     padding: 0;
+    scroll-snap-type: x mandatory;
 }
 
 
@@ -33,10 +35,10 @@ body{
     }
   } */
 
-  /* Page d'accueil */
+/* Page d'accueil */
 .rond1 {
-    position: sticky; 
-    top: -33vw; 
+    position: sticky;
+    top: -33vw;
     background-color: #E4A800;
     width: 40vw;
     height: 40vw;
@@ -44,13 +46,13 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5vh; 
+    margin-top: 5vh;
     overflow: hidden;
     z-index: 5;
 }
 
 .rond2 {
-    position: absolute; 
+    position: absolute;
     background-color: #552800;
     width: 34vw;
     height: 34vw;
@@ -59,49 +61,50 @@ body{
 }
 
 h1 {
-    position: sticky; 
-    top: 0px; 
+    position: sticky;
+    top: 0px;
     text-align: center;
     color: #FF0066;
     font-size: 8vw;
     font-family: 'CreamBeige', sans-serif;
     white-space: nowrap;
-    margin-top: -25vw; 
+    margin-top: -25vw;
     text-shadow: #000 10px 10px 0;
     z-index: 5;
 }
 
-.scrollBas{
+.scrollBas {
     position: absolute;
     top: 85vh;
     transition: 1.5ms;
     width: 100%;
 }
 
-.scrollBasGauche{
+.scrollBasGauche {
     left: 30px;
     position: absolute;
 }
 
-.scrollBasDroite{
+.scrollBasDroite {
     right: 30px;
     position: absolute;
 }
 
-.scrollBas img{
+.scrollBas img {
     animation: 1.5s infinite alternate move;
 }
 
-@keyframes move{
-    from{
+@keyframes move {
+    from {
         top: 0;
     }
-    to{
-        top:5vh;
+
+    to {
+        top: 5vh;
     }
 }
 
-.scrollBasTexte{
+.scrollBasTexte {
     text-align: center;
     top: 10vh;
     left: 45vw;
@@ -115,13 +118,13 @@ h1 {
 
 /* Corps de la page */
 
-ul{
+ul {
     list-style: none;
     display: flex;
     flex-direction: row;
 }
 
-ul li{
+ul li {
     text-decoration: none;
     background-color: rgb(46, 46, 46);
     margin: 4%;
@@ -131,22 +134,22 @@ ul li{
 }
 
 
-.typesProjets{
+.typesProjets {
     margin-top: 60vh;
-    background-color: #E4A800;   
+    background-color: #E4A800;
     padding: 5vh 0;
     width: 100%;
     justify-content: center;
     position: sticky;
     top: 0;
-} 
+}
 
-.typesProjets li:hover{
+.typesProjets li:hover {
     cursor: pointer;
     background-color: rgb(61, 61, 61);
 }
 
-.typesProjets li{
+.typesProjets li {
     width: 35vw;
     height: 5vw;
     margin: 0 7vw;
@@ -157,7 +160,7 @@ ul li{
 
 
 
-.projetBG{
+.projetBG {
     margin-top: 50px;
     border-radius: 80% 80% 0 0;
     overflow: visible;
@@ -168,31 +171,31 @@ ul li{
 .projets {
     padding: 0;
     width: 100%;
-    overflow-x: scroll; 
+    overflow-x: scroll;
     height: 40vw;
     display: flex;
 }
 
 .projets .carte {
-    flex: 0 0 25vw; 
+    flex: 0 0 25vw;
     max-width: 25vw;
-    margin: 2vw; 
-    padding:1vw;
+    margin: 2vw;
+    padding: 1vw;
     perspective: 1000px;
     transition: 0.15s;
     box-shadow: #000 15px 15px 0;
 }
 
-.projets .carte:hover{
+.projets .carte:hover {
     background-color: rgb(65, 65, 65);
 }
 
-.projets h2{
+.projets h2 {
     font-family: 'CreamBeige', sans-serif;
     text-shadow: #000 6px 6px 0;
 }
 
-.projets .img{
+.projets .img {
     margin: 0 auto;
     width: 80%;
     background-color: #552800;
@@ -206,21 +209,9 @@ ul li{
 }
 
 
-.projets .img div{
-    min-width:100%;
+.projets .img div {
+    min-width: 100%;
     margin-right: 20px;
     background-color: aqua;
     scroll-snap-align: center;
 }
-
-
-
-
-/* .pers{
-    background-color: rgb(19, 0, 124);
-}
-
-.uni{
-    background-color: rgb(204, 184, 2);
-} */
-
